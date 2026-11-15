@@ -11,3 +11,6 @@ depends_on = ["ref.extract@1"]
 health = "HealthOp"
 start_timeout_ms = 5000
 restart_backoff_ms = [1000, 300000]
+
+[limits]
+disk_bytes = "64M"  # the most its folders may hold

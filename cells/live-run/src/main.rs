@@ -27,7 +27,8 @@ fn scrub(v: &Value) -> Value {
     const PUBLIC: [&str; 4] = ["live-refs", "ce-net-proto", "demos", "ce-ref-id"];
     let host = std::fs::read_to_string("/etc/hostname").unwrap_or_default().trim().to_string();
     let w = |s: &str| -> String {
-        let s = s.replace(&host, "ops-1");
+        let home = std::env::var("HOME").unwrap_or_default();
+        let s = s.replace(&host, "ops-1").replace(&home, "~");
         let mut out = String::new();
         for (i, part) in s.split("repo:").enumerate() {
             if i == 0 { out.push_str(part); continue; }

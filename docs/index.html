@@ -18,10 +18,11 @@ body{background:var(--ground);color:var(--ink);font:400 var(--t-base)/1.5 var(--
 .btn.on{color:var(--acc-ink);background:var(--acc);border-color:var(--acc)}
 .lede{max-width:44em;color:var(--ink-2);margin:0 0 var(--s-5)}
 h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-transform:uppercase;color:var(--ink-2);margin:var(--s-7) 0 var(--s-3)}
-.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:var(--s-2);margin:0 0 var(--s-5)}
-.num{padding:var(--s-3) var(--s-4)}
-.num b{display:block;font:500 var(--t-num)/1.2 var(--mono);color:var(--ink)}
-.num span{font:400 11px/1.4 var(--mono);color:var(--ink-3)}
+.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--s-2);margin:0 0 var(--s-5)}
+.num,.dev,.panel{min-width:0}html,body{overflow-x:hidden}
+.num{padding:var(--s-3) var(--s-4);min-width:0}
+.num b{display:block;font:500 17px/1.25 var(--mono);color:var(--ink);overflow-wrap:anywhere;white-space:normal}
+.num span{display:block;font:400 11px/1.4 var(--mono);color:var(--ink-3);overflow-wrap:anywhere;white-space:normal}
 .bar{display:flex;flex-wrap:wrap;gap:var(--s-2);align-items:center;margin:0 0 var(--s-4)}
 .bar .t{font:400 11px var(--mono);color:var(--ink-3)}
 .devs{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-2)}
@@ -240,7 +241,8 @@ function graph(){
   var root="row:refs.catalog/asset-7",W=1000,H=560,cx=W/2,cy=H/2;G.pos={};G.pos[root]=[cx,cy];
   var ring1=[],ring2=[];ids.forEach(function(x){if(x===root)return;var d=E.some(function(e){return(norm(e.from)===root&&norm(e.to)===x)||(norm(e.to)===root&&norm(e.from)===x)});(d?ring1:ring2).push(x)});
   function place(a,rx,ry,off){a.forEach(function(x,k){var t=off+2*Math.PI*k/a.length;G.pos[x]=[cx+rx*Math.cos(t),cy+ry*Math.sin(t)]})}
-  place(ring1,250,150,-Math.PI/2);place(ring2,440,240,-Math.PI/2+.35);
+  place(ring1,250,150,-Math.PI/2);place(ring2,380,240,-Math.PI/2+.35);
+  Object.keys(G.pos).forEach(function(x){var w=Math.min(34,short(x).length)*6.1+14;G.pos[x][0]=Math.max(w/2+4,Math.min(W-w/2-4,G.pos[x][0]))});
   var h="";E.forEach(function(e,k){var a=G.pos[norm(e.from)],b=G.pos[norm(e.to)];var mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2;
     h+='<g data-e="'+k+'"><title>'+esc(e.from+" → "+e.to+"\n"+e.why+"\n"+e.evidence)+'</title><path class="edge" d="M'+a[0]+","+a[1]+" L"+b[0]+","+b[1]+'"/><text class="elab" x="'+mx+'" y="'+(my-3)+'" text-anchor="middle">'+esc(e.why)+"</text></g>"});
   ids.forEach(function(x){var p=G.pos[x],t=short(x);t=t.length>34?t.slice(0,33)+"…":t;var w=t.length*6.1+14;

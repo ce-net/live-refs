@@ -1,0 +1,55 @@
+{
+  "ambiguity": {
+    "accepted": true,
+    "pinned": "repo:live-refs/README.md@48cf196 sha256:9b5ad25554ab5e2c8bc89a5c5507d89c7398a77cb3689209a8c718f91644b117",
+    "reason": "'README.md' is a bare path: 1160 checkouts on node:ops-1 have one, each a different file. Write one of the pinned forms (first 5 shown).",
+    "refused": true
+  },
+  "call_ms": {
+    "max": 75.032663,
+    "n": 18,
+    "p50": 2.315249
+  },
+  "connect_ms": {
+    "ref.graph": 1.401286,
+    "ref.pin": 1.403166,
+    "ref.resolve": 11.211085
+  },
+  "graph": {
+    "edges": 42
+  },
+  "kinds": [
+    {
+      "located": true,
+      "ms": 28.949956,
+      "ref": "repo:live-refs/README.md@48cf196"
+    },
+    {
+      "located": true,
+      "ms": 2.315249,
+      "ref": "node:ops-1"
+    },
+    {
+      "located": true,
+      "ms": 75.032663,
+      "ref": "cell:ref.extract@1"
+    },
+    {
+      "located": true,
+      "ms": 68.807597,
+      "ref": "cell:ref.pin@1#Fetch"
+    },
+    {
+      "located": true,
+      "ms": 1.0297640000000001,
+      "ref": "ce-blob:sha256:1b74201d42ad683f014d4719c59a7082ddae8b34a24ce550c64e0afacaebf3ff"
+    }
+  ],
+  "node": "ops-1",
+  "pin": {
+    "repo_fetch_ok": true,
+    "repo_file": "repo:live-refs/README.md@48cf196 sha256:9b5ad25554ab5e2c8bc89a5c5507d89c7398a77cb3689209a8c718f91644b117",
+    "tamper_refused": true
+  },
+  "total_ms": 416.648398
+}
