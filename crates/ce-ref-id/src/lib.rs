@@ -543,6 +543,37 @@ pub mod typed {
     }
 }
 
+/// Makes a ref from a literal: `ce_ref!("...")` gives a `Ref`, `ce_ref!(Kind, "...")` a `Typed<Kind>`.
+///
+/// ```
+/// use ce_ref_id::{ce_ref, typed::*};
+/// fn open(f: Typed<FileK>) -> String { f.r.to_string() }
+/// let f = ce_ref!(FileK, "ce-blob:sha256:3f9b0d4d3e88a9987a8670f2ab9ff7b912448d8ade2bd369395d06e48c6feb51");
+/// assert!(open(f).starts_with("ce-blob:"));
+/// ```
+///
+/// A node ref cannot be handed to a function that takes a file ref:
+///
+/// ```compile_fail,E0308
+/// use ce_ref_id::{ce_ref, typed::*};
+/// fn open(f: Typed<FileK>) -> String { f.r.to_string() }
+/// let n = ce_ref!(NodeK, "node:pi-01");
+/// open(n);
+/// ```
+///
+/// The ref must be a string literal:
+///
+/// ```compile_fail,E0308
+/// use ce_ref_id::{ce_ref, typed::*};
+/// let f = ce_ref!(FileK, 42);
+/// ```
+///
+/// The kind must be a ref kind:
+///
+/// ```compile_fail,E0277
+/// use ce_ref_id::ce_ref;
+/// let f = ce_ref!(String, "node:pi-01");
+/// ```
 #[macro_export]
 macro_rules! ce_ref {
     ($k:ty, $s:literal) => {
