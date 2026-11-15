@@ -1,0 +1,13 @@
+# The real cells, for a node with the ce-net door (ce-door, ce-gate). These build against the private rust-stack
+# crates; the open sim in the repo root does not need them.
+[workspace]
+resolver = "2"
+members = ["refs-wire", "ref-resolve", "ref-pin", "ref-graph", "live-run"]
+
+[workspace.dependencies]
+ce-wire = { git = "https://github.com/Leif-Rydenfalk/rust-stack", rev = "7083669b3240dce8dbc66142d7c9e127fab4aedf" }
+ce-gate = { git = "https://github.com/Leif-Rydenfalk/rust-stack", rev = "7083669b3240dce8dbc66142d7c9e127fab4aedf" }
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "net", "time", "sync"] }
+serde_json = "1"
+ce-ref-id = { path = "../crates/ce-ref-id" }
+refs-wire = { path = "refs-wire" }

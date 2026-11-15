@@ -1,0 +1,9 @@
+[package]
+name = "refs-api"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Typed contracts of ref.resolve@1, ref.pin@1, ref.graph@1, refs.catalog@1 and erp.orders@1, from contracts/*.rs"
+
+[dependencies]
+wire-lite = { path = "../wire-lite" }

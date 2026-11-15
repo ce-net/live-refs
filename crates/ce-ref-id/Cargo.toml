@@ -1,0 +1,12 @@
+[package]
+name = "ce-ref-id"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "ce-ref ids in Rust, byte-identical to the reference implementation: portable file refs, pinned repo paths, blobs, nodes, principals, cell ops, capabilities"
+
+[dependencies]
+sha2 = "0.10"
+
+[dev-dependencies]
+serde_json = "1"

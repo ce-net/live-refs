@@ -1,0 +1,16 @@
+[package]
+name = "live-refs-live"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "live-refs against the real cells on this node: resolve, pin, tamper refusal, ambiguity and the ref graph over ref.extract"
+
+[dependencies]
+refs-wire.workspace = true
+ce-ref-id.workspace = true
+ce-wire.workspace = true
+ce-gate.workspace = true
+tokio.workspace = true
+serde_json.workspace = true
+live-proof = { path = "../../crates/live-proof" }
+ed25519-dalek = "2"

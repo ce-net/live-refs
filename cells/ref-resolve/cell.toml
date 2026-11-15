@@ -1,0 +1,13 @@
+# One cell, one function. Contract: contracts/ref_resolve.rs (compiled by ce_wire::api! in refs-wire).
+[cell]
+api = "ref.resolve"
+owner = "live-refs"
+kind = "function"
+crate = "live-ref-resolve"
+args = ["serve"]
+depends_on = []
+
+[launch]
+health = "HealthOp"
+start_timeout_ms = 5000
+restart_backoff_ms = [1000, 300000]

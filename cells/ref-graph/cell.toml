@@ -1,0 +1,13 @@
+# One cell, one function. Contract: contracts/ref_graph.rs (compiled by ce_wire::api! in refs-wire).
+[cell]
+api = "ref.graph"
+owner = "live-refs"
+kind = "function"
+crate = "live-ref-graph"
+args = ["serve"]
+depends_on = ["ref.extract@1"]
+
+[launch]
+health = "HealthOp"
+start_timeout_ms = 5000
+restart_backoff_ms = [1000, 300000]

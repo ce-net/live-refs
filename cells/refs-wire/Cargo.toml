@@ -1,0 +1,12 @@
+[package]
+name = "refs-wire"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "contracts/*.rs compiled by ce_wire::api!: the types every live ref cell and its callers use"
+
+[dependencies]
+ce-wire = { git = "https://github.com/Leif-Rydenfalk/rust-stack", rev = "7083669b3240dce8dbc66142d7c9e127fab4aedf", default-features = false, features = ["codec"] }
+
+[dev-dependencies]
+refs-api = { path = "../../crates/refs-api" }

@@ -1,0 +1,15 @@
+[package]
+name = "live-ref-graph"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "The ref.graph cell of live-refs, behind the ce-net door"
+
+[dependencies]
+ref-extract-api = { git = "https://github.com/Leif-Rydenfalk/ref-extract.git", rev = "af0e398" }
+refs-wire.workspace = true
+ce-ref-id.workspace = true
+ce-wire.workspace = true
+ce-gate.workspace = true
+tokio.workspace = true
+serde_json.workspace = true

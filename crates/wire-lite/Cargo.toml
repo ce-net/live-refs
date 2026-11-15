@@ -1,0 +1,9 @@
+[package]
+name = "wire-lite"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "An open stand-in for ce_wire::api!: the same contract text compiles to the same api name, op ids, rights and schema hash, with serde types, for the sim mesh"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }

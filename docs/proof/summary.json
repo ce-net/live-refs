@@ -1,0 +1,426 @@
+{
+  "ambiguity": {
+    "accepted": 1,
+    "cal": "CAL compile: 'run.py' is a bare path: it names a different file on every machine. Write repo:<repo>/<path>@<commit> sha256:<hash> for a file in a repository, or ce-blob:sha256:<hash> for any other content",
+    "candidates": [
+      "repo:huey-scripts/run.py@3f2a1c7 sha256:7ae82eb580c87d6d6dc26d0cfad7c87ed2b10548bdc9bcab91934d13921f0d04",
+      "repo:notes/run.py@7c1e2d4 sha256:6ebafd781e29c65846d6bb540d0ba950856ca9405bc713868952876085947860"
+    ],
+    "refused": 1
+  },
+  "cards": [
+    {
+      "from": "phone",
+      "holders": [
+        "laptop"
+      ],
+      "kind": "file on a personal laptop",
+      "located": {
+        "as_of_ms": 1794772453248,
+        "detail": "repo:notes/plan.md@7c1e2d4 | commit 7c1e2d4a9b3f5e6d8c0a1b2c3d4e5f6a7b8c9d0e",
+        "holders": [
+          {
+            "live": true,
+            "node": "laptop",
+            "node_key": "0391e5d44aa68e3db532944a410b2dc2cac505abcbfc6e6491555e9cd9abe2bb",
+            "sha256": "470b64b2563301c1624fa3e8d8c0eb197103dec94d2a6c2de706cb3b3c7d395d",
+            "since_ms": 1794772453248,
+            "size": 52
+          }
+        ],
+        "id": "ce-ref://repo/4568111a53b88dac1f499279a5767db3181c6eb6e745cdb7895049f808799bee/plan.md",
+        "kind": "file",
+        "pin": "sha256:470b64b2563301c1624fa3e8d8c0eb197103dec94d2a6c2de706cb3b3c7d395d",
+        "source": "mesh"
+      },
+      "ms": 53.773897,
+      "ref": "ce-ref://repo/4568111a53b88dac1f499279a5767db3181c6eb6e745cdb7895049f808799bee/plan.md"
+    },
+    {
+      "from": "server",
+      "holders": [
+        "phone"
+      ],
+      "kind": "blob",
+      "located": {
+        "as_of_ms": 1794772453463,
+        "detail": "ce-blob:sha256:b154b0287a2e6a79352bfec71cb8644384e84bc69c89e8ce006fe7a7056345d0",
+        "holders": [
+          {
+            "live": true,
+            "node": "phone",
+            "node_key": "79a2d4ca63174152a44a74b87723f3ebc0aa6134d61428a4460332349f040053",
+            "sha256": "b154b0287a2e6a79352bfec71cb8644384e84bc69c89e8ce006fe7a7056345d0",
+            "since_ms": 1794772453463,
+            "size": 42
+          }
+        ],
+        "id": "ce-blob:sha256:b154b0287a2e6a79352bfec71cb8644384e84bc69c89e8ce006fe7a7056345d0",
+        "kind": "blob",
+        "pin": "sha256:b154b0287a2e6a79352bfec71cb8644384e84bc69c89e8ce006fe7a7056345d0",
+        "source": "mesh"
+      },
+      "ms": 30.593923,
+      "ref": "ce-blob:sha256:b154b0287a2e6a79352bfec71cb8644384e84bc69c89e8ce006fe7a7056345d0"
+    },
+    {
+      "from": "enterprise",
+      "holders": [
+        "server"
+      ],
+      "kind": "repo path pinned at a commit",
+      "located": {
+        "as_of_ms": 1794772453380,
+        "detail": "repo:huey-scripts/run.py@3f2a1c7 | commit 3f2a1c7e9d4b5a6c8e0f1a2b3c4d5e6f7a8b9c0d",
+        "holders": [
+          {
+            "live": true,
+            "node": "server",
+            "node_key": "b979c101fd07160814aba025b16560604592439fd9286a21ed777fc351a2ee36",
+            "sha256": "7ae82eb580c87d6d6dc26d0cfad7c87ed2b10548bdc9bcab91934d13921f0d04",
+            "since_ms": 1794772453380,
+            "size": 31
+          }
+        ],
+        "id": "ce-ref://repo/b47ae72900538d9d902251c935592073814514e0a5db7f31b4731a2fc046f331/run.py",
+        "kind": "file",
+        "pin": "sha256:7ae82eb580c87d6d6dc26d0cfad7c87ed2b10548bdc9bcab91934d13921f0d04",
+        "source": "mesh"
+      },
+      "ms": 31.299486,
+      "ref": "repo:huey-scripts/run.py@3f2a1c7 sha256:7ae82eb580c87d6d6dc26d0cfad7c87ed2b10548bdc9bcab91934d13921f0d04"
+    },
+    {
+      "from": "laptop",
+      "holders": [
+        "enterprise"
+      ],
+      "kind": "node",
+      "located": {
+        "as_of_ms": 1794772454919,
+        "detail": "node key ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4 at 127.0.0.1:35373",
+        "holders": [
+          {
+            "live": true,
+            "node": "enterprise",
+            "node_key": "7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+            "sha256": null,
+            "since_ms": 0,
+            "size": 0
+          }
+        ],
+        "id": "node:enterprise",
+        "kind": "node",
+        "pin": "ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+        "source": "mesh"
+      },
+      "ms": 76.91459,
+      "ref": "node:enterprise"
+    },
+    {
+      "from": "enterprise",
+      "holders": [
+        "laptop",
+        "phone"
+      ],
+      "kind": "person",
+      "located": {
+        "as_of_ms": 1794772453532,
+        "detail": "ed25519:b1d9d14f24d76bf0cd2661b986b1c14c0cedcc265554ec8ff9e04662975b4c10 | signed in on this device",
+        "holders": [
+          {
+            "live": true,
+            "node": "laptop",
+            "node_key": "0391e5d44aa68e3db532944a410b2dc2cac505abcbfc6e6491555e9cd9abe2bb",
+            "sha256": null,
+            "since_ms": 1794772453497,
+            "size": 0
+          },
+          {
+            "live": true,
+            "node": "phone",
+            "node_key": "79a2d4ca63174152a44a74b87723f3ebc0aa6134d61428a4460332349f040053",
+            "sha256": null,
+            "since_ms": 1794772453532,
+            "size": 0
+          }
+        ],
+        "id": "person:leif",
+        "kind": "person",
+        "pin": "ed25519:b1d9d14f24d76bf0cd2661b986b1c14c0cedcc265554ec8ff9e04662975b4c10",
+        "source": "mesh"
+      },
+      "ms": 18.698435,
+      "ref": "person:leif"
+    },
+    {
+      "from": "phone",
+      "holders": [
+        "server"
+      ],
+      "kind": "agent",
+      "located": {
+        "as_of_ms": 1794772453556,
+        "detail": "ed25519:8a78efc8064db6b7472f98aacd71f4b7660afd5f642771c2940032038b5b1341 | runs ref.extract scans",
+        "holders": [
+          {
+            "live": true,
+            "node": "server",
+            "node_key": "b979c101fd07160814aba025b16560604592439fd9286a21ed777fc351a2ee36",
+            "sha256": null,
+            "since_ms": 1794772453556,
+            "size": 0
+          }
+        ],
+        "id": "agent:indexer",
+        "kind": "agent",
+        "pin": "ed25519:8a78efc8064db6b7472f98aacd71f4b7660afd5f642771c2940032038b5b1341",
+        "source": "mesh"
+      },
+      "ms": 39.670721,
+      "ref": "agent:indexer"
+    },
+    {
+      "from": "laptop",
+      "holders": [
+        "enterprise",
+        "laptop",
+        "phone",
+        "server"
+      ],
+      "kind": "cell op",
+      "located": {
+        "as_of_ms": 1794772454091,
+        "detail": "op Fetch needs ref.pin:read | schema 966357c40f1b9fff | ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+        "holders": [
+          {
+            "live": true,
+            "node": "enterprise",
+            "node_key": "7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+            "sha256": null,
+            "since_ms": 1794772454000,
+            "size": 0
+          },
+          {
+            "live": true,
+            "node": "laptop",
+            "node_key": "0391e5d44aa68e3db532944a410b2dc2cac505abcbfc6e6491555e9cd9abe2bb",
+            "sha256": null,
+            "since_ms": 1794772453603,
+            "size": 0
+          },
+          {
+            "live": true,
+            "node": "phone",
+            "node_key": "79a2d4ca63174152a44a74b87723f3ebc0aa6134d61428a4460332349f040053",
+            "sha256": null,
+            "since_ms": 1794772454091,
+            "size": 0
+          },
+          {
+            "live": true,
+            "node": "server",
+            "node_key": "b979c101fd07160814aba025b16560604592439fd9286a21ed777fc351a2ee36",
+            "sha256": null,
+            "since_ms": 1794772453823,
+            "size": 0
+          }
+        ],
+        "id": "cell:ref.pin@1",
+        "kind": "cell",
+        "pin": "ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+        "source": "mesh"
+      },
+      "ms": 41.858969,
+      "ref": "cell:ref.pin@1#Fetch"
+    },
+    {
+      "from": "server",
+      "holders": [
+        "enterprise"
+      ],
+      "kind": "capability",
+      "located": {
+        "as_of_ms": 1794772454305,
+        "detail": "issued by person:leif ed25519:b1d9d14f24d76bf0cd2661b986b1c14c0cedcc265554ec8ff9e04662975b4c10 to agent:reporter | can erp.orders:GetOrder, proc.spawn:run on node:enterprise | program 853e402c9cede6dcac509a2fad713c304d4073e3196c7ebbd39fedd8ae174149",
+        "holders": [
+          {
+            "live": true,
+            "node": "enterprise",
+            "node_key": "7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+            "sha256": null,
+            "since_ms": 1794772454305,
+            "size": 0
+          }
+        ],
+        "id": "cap:4787e72fd8cc9f5af1185ded25539de04de409b627fa32e9e20702d6f788b467",
+        "kind": "capability",
+        "pin": null,
+        "source": "mesh"
+      },
+      "ms": 29.63184,
+      "ref": "cap:4787e72fd8cc9f5af1185ded25539de04de409b627fa32e9e20702d6f788b467"
+    },
+    {
+      "from": "phone",
+      "holders": [
+        "enterprise"
+      ],
+      "kind": "enterprise system wrapped as a cell",
+      "located": {
+        "as_of_ms": 1794772454257,
+        "detail": "wrapped from erp-legacy sha256:58d33945b8598b4bc2aa0464b08687c8338991f13ac71004b41b2f234f1f1429 (plain HTTP) | schema 219aa4ca72dd6fec | ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+        "holders": [
+          {
+            "live": true,
+            "node": "enterprise",
+            "node_key": "7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+            "sha256": null,
+            "since_ms": 1794772454257,
+            "size": 0
+          }
+        ],
+        "id": "cell:erp.orders@1",
+        "kind": "cell (wrapped system)",
+        "pin": "ed25519:7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4",
+        "source": "mesh"
+      },
+      "ms": 33.462575,
+      "ref": "cell:erp.orders@1"
+    }
+  ],
+  "contracts": {
+    "erp.orders@1": "219aa4ca72dd6fec",
+    "ref.graph@1": "6a80238adaff0379",
+    "ref.pin@1": "966357c40f1b9fff",
+    "ref.resolve@1": "0aa2e2474931699b",
+    "refs.catalog@1": "fd8f743bf85005ca"
+  },
+  "grant": {
+    "allowed": true,
+    "explain": "A chain of 1 link, carrying 1 program. Each link is signed by its issuer and can only narrow the link above it; every use must satisfy every link.\n\nLink 0: person:leif grants agent:reporter\n  link id   4787e72fd8cc9f5af1185ded25539de04de409b627fa32e9e20702d6f788b467\n  issuer    person:leif = ed25519:b1d9d14f24d76bf0cd2661b986b1c14c0cedcc265554ec8ff9e04662975b4c10\n  audience  agent:reporter = ed25519:4b77dac19f97807b821a9dba14cc17a2435f5c7c02e93e8a0ec9301af424e410\n  This is the root: a node accepts the chain only if it trusts the issuer's key as a root.\n  Own use: agent:reporter may 'erp.orders:GetOrder', 'proc.spawn:run'.\n  Delegation: nothing may be granted below this link (it is final).\n  Where: only on node:enterprise = 7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4.\n  When: until 2026-12-15 19:54:12 UTC (unix 1797364452).\n  Programs: may be used only to execute program 853e402c9cede6dcac509a2fad713c304d4073e3196c7ebbd39fedd8ae174149.\n  Conditions: none on this link.\n\nProgram program 853e402c9cede6dcac509a2fad713c304d4073e3196c7ebbd39fedd8ae174149, 2 steps:\n  step 0: spawn /srv/reports/q4.py, which must be repo:notes/reports/q4.py@7c1e2d4, content sha256:4030eab8f599b98d84e7424cac5a46c244cb09f84b491d6d1ebdba4528a7e669 once, to completion, only on node:enterprise = 7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4.\n          argv [\"q4.py\"]; environment empty; working directory a private one the runner chooses.\n          Sandbox: 1 CPU core, 512 MB memory, at most 10 minutes; reads only its executable; writes nothing.\n          Network: none.\n          The runner checks the executable's bytes against its hash before it starts it.\n  step 1: call erp.orders GetOrder on node:enterprise = 7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4, with exactly the request whose bytes hash to sha256:ff9f8a9501e4322de3fc60e49f505dc953094c87892f9b09f8c48835fb4ebd37.\n  Typed under the leaf: every step is within what agent:reporter may do.\n\nIn short: the chain is held by agent:reporter = ed25519:4b77dac19f97807b821a9dba14cc17a2435f5c7c02e93e8a0ec9301af424e410.\n  It may 'erp.orders:GetOrder', 'proc.spawn:run', only on node:enterprise = 7003909dc56177f9c76c37e1e890dccba541b4f296e26b3fc3f95b9bbb030eb4, until 2026-12-15 19:54:12 UTC, only to execute 853e402c9cede6dc.\n  It may grant nothing further.\n  No condition beyond the chain itself: no proof is needed at use.\n",
+    "link": "4787e72fd8cc9f5af1185ded25539de04de409b627fa32e9e20702d6f788b467",
+    "other_op_refused": true,
+    "program": "853e402c9cede6dcac509a2fad713c304d4073e3196c7ebbd39fedd8ae174149",
+    "source": "cal 1\nperson:leif grants agent:reporter {\n  can erp.orders:GetOrder, proc.spawn:run\n  on node:enterprise\n  for 30d\n  only {\n    spawn repo:notes/reports/q4.py@7c1e2d4 sha256:4030eab8f599b98d84e7424cac5a46c244cb09f84b491d6d1ebdba4528a7e669 at /srv/reports/q4.py on node:enterprise\n    call cell:erp.orders@1 GetOrder on node:enterprise body sha256:ff9f8a9501e4322de3fc60e49f505dc953094c87892f9b09f8c48835fb4ebd37\n  }\n  nonce 7\n}\n",
+    "tampered_refused": true
+  },
+  "graph": {
+    "edges": 12,
+    "has_commit": true,
+    "has_grant": true,
+    "has_reader": true,
+    "has_row": true
+  },
+  "ids": {
+    "cal_rust": {
+      "differs": [
+        {
+          "cal": null,
+          "input": "  https://github.com/a/b",
+          "python_and_ce_ref_id": [
+            "b703f2afd8642d7917c19335acfbe2f46d649f3c1f9aecdcbf8572e40c470e8a",
+            "github.com/a/b"
+          ]
+        },
+        {
+          "cal": [
+            "35097a706e20b7de81211418b8351186da0b2773d30cbdcbc7ff22fd5e9fdeae",
+            "github.com/a/\tb"
+          ],
+          "input": "https://github.com/a/\tb",
+          "python_and_ce_ref_id": [
+            "b703f2afd8642d7917c19335acfbe2f46d649f3c1f9aecdcbf8572e40c470e8a",
+            "github.com/a/b"
+          ]
+        },
+        {
+          "cal": null,
+          "input": "HTTPS://Example.COM/A/B",
+          "python_and_ce_ref_id": [
+            "69e535c6eac22746e8907e39f845b9bf0b5816d3aa3260c46f852f984681ed16",
+            "example.com/A/B"
+          ]
+        },
+        {
+          "cal": [
+            "d636528f772df4f4d4234c2f8fce7756eb8d53c2613db75113431c39539920f4",
+            "[/a/b"
+          ],
+          "input": "https://[::1]/a/b",
+          "python_and_ce_ref_id": [
+            "eb572b5950854eb55a590a72f0f0425dadf9d53ea0b25a89464f3e7a3278d36f",
+            "::1/a/b"
+          ]
+        }
+      ],
+      "of": 46,
+      "same": 42
+    },
+    "python_vectors": {
+      "of": 60,
+      "same": 60
+    },
+    "summary": "60 of 60 against the Python, 42 of 46 against CAL's Rust"
+  },
+  "kinds_resolved": "9 of 9",
+  "membership_grant": "cal 1\nperson:leif grants node:laptop {\n  can ref.resolve:health, ref.resolve:read, ref.resolve:announce, ref.pin:health, ref.pin:read, ref.pin:write, ref.graph:read, ref.graph:write, refs.catalog:read, refs.catalog:write\n  on any node\n  for 30d\n  nonce 100\n}\n",
+  "mode": "sim: four processes on 127.0.0.1",
+  "move": {
+    "after": [
+      "server"
+    ],
+    "before": [
+      "laptop"
+    ],
+    "converged": true,
+    "id": "ce-ref://repo/4568111a53b88dac1f499279a5767db3181c6eb6e745cdb7895049f808799bee/plan.md",
+    "ms": 162.0,
+    "polls": 1,
+    "same_id": true
+  },
+  "nodes_up_ms": {
+    "enterprise": 1.252605,
+    "laptop": 1.550726,
+    "phone": 2.053848,
+    "server": 1.201565
+  },
+  "offline": {
+    "after_heal": "mesh",
+    "of": 3,
+    "refs": [
+      {
+        "as_of_ms": 1794772458800,
+        "ref": "ce-ref://repo/4568111a53b88dac1f499279a5767db3181c6eb6e745cdb7895049f808799bee/plan.md",
+        "source": "local index"
+      },
+      {
+        "as_of_ms": 1794772453380,
+        "ref": "repo:huey-scripts/run.py@3f2a1c7 sha256:7ae82eb580c87d6d6dc26d0cfad7c87ed2b10548bdc9bcab91934d13921f0d04",
+        "source": "local index"
+      },
+      {
+        "as_of_ms": 1794772454257,
+        "ref": "cell:erp.orders@1",
+        "source": "local index"
+      }
+    ],
+    "resolved": 3
+  },
+  "record": {
+    "bytes_ok": true,
+    "file_on": [
+      "phone"
+    ],
+    "read_from": "enterprise",
+    "row_on": "server"
+  },
+  "resolve_ms": {
+    "n": 198,
+    "p50": 9.03,
+    "p95": 48.26
+  },
+  "steps": 32,
+  "tamper_refusals": "2 of 2",
+  "total_ms": 6300.0
+}
