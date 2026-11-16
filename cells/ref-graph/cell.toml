@@ -14,3 +14,16 @@ restart_backoff_ms = [1000, 300000]
 
 [limits]
 disk_bytes = "64M"  # the most its folders may hold
+
+[stamp]
+id = "cell:ref.graph"
+kind = "cell"
+path = "cells/ref-graph/cell.toml"
+updated_at = 2026-11-15T19:56:30Z
+version = "0.1.0"
+access = "public"
+canonical_of = []
+duplicate_of = ""
+owner = "foreman/live-refs"
+source_of_truth = "https://github.com/ce-net/live-refs"
+stale_after = 180
